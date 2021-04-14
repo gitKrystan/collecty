@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes or /recipes.json
   def index
+    Net::HTTP.get('example.com', '/index.html')
     @recipes = Recipe.all
   end
 
